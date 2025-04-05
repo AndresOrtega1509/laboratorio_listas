@@ -290,6 +290,21 @@ public class ListaSimple<T> implements Iterable<T> {
 
 		return nuevaLista;
 	}
+
+	public ListaSimple<T> filtrarElementosConLongitudPar(ListaSimple<T> lista) {
+		ListaSimple<T> resultado = new ListaSimple<>();
+
+		for (T elemento : lista) {
+			if (elemento != null) {
+				String texto = elemento.toString();
+				if (texto.length() % 2 == 0) {
+					resultado.agregarfinal(elemento);
+				}
+			}
+		}
+
+		return resultado;
+	}
 	
 
 }
