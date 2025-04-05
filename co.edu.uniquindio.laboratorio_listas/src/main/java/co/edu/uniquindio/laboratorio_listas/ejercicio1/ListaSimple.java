@@ -305,6 +305,24 @@ public class ListaSimple<T> implements Iterable<T> {
 
 		return resultado;
 	}
-	
+
+	public ListaSimple<T> eliminarNumerosPares(ListaSimple<T> lista) {
+		Nodo<T> actual = lista.getNodoPrimero();
+
+		while (actual != null) {
+			Nodo<T> siguiente = actual.getSiguienteNodo();
+			T valor = actual.getValorNodo();
+
+			if (valor instanceof Integer && ((Integer) valor) % 2 == 0) {
+				lista.eliminar(valor);
+			}
+
+			actual = siguiente;
+		}
+
+		return lista;
+	}
+
+
 
 }
