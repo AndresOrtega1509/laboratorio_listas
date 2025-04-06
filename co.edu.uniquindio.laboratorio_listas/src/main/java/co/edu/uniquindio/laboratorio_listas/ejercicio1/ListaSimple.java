@@ -1,5 +1,6 @@
 package co.edu.uniquindio.laboratorio_listas.ejercicio1;
 
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -290,21 +291,6 @@ public class ListaSimple<T> implements Iterable<T> {
 		}
 
 		return nuevaLista;
-	}
-
-	public ListaSimple<T> filtrarElementosConLongitudPar(ListaSimple<T> lista) {
-		ListaSimple<T> resultado = new ListaSimple<>();
-
-		for (T elemento : lista) {
-			if (elemento != null) {
-				String texto = elemento.toString();
-				if (texto.length() % 2 == 0) {
-					resultado.agregarfinal(elemento);
-				}
-			}
-		}
-
-		return resultado;
 	}
 
 	public ListaSimple<T> eliminarNumerosPares(ListaSimple<T> lista) {

@@ -5,9 +5,9 @@ import co.edu.uniquindio.laboratorio_listas.ejercicio1.ListaSimple;
 public class Persona {
 
     private String nombre;
-    private Integer cedula;
+    private String cedula;
 
-    public Persona(String nombre, Integer cedula) {
+    public Persona(String nombre, String cedula) {
         this.nombre = nombre;
         this.cedula = cedula;
     }
@@ -17,18 +17,19 @@ public class Persona {
         return nombre;
     }
 
-    public Integer getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public static ListaSimple obtenerListaCedulasConCantidadNumerosPar(ListaSimple<Persona> personas){
-        ListaSimple listaSimple = new ListaSimple<>();
-        ListaSimple<Integer> listaCedulas = new ListaSimple<>();
-        for (Persona cedulas : personas){
-            if(cedulas != null){
-            listaCedulas.agregarfinal(cedulas.getCedula());
-            }
-        }
-        return listaSimple.filtrarElementosConLongitudPar(listaCedulas);
+    public boolean tieneCedulaPar(){
+        return cedula.length() % 2 == 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", cedula='" + cedula + '\'' +
+                '}';
     }
 }
