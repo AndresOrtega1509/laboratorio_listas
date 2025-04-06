@@ -1,6 +1,7 @@
 package co.edu.uniquindio.laboratorio_listas.ejercicio1;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * 
@@ -18,7 +19,7 @@ public class ListaSimple<T> implements Iterable<T> {
 
 	public ListaSimple() {
 		nodoPrimero = null;
-		nodoPrimero = null;
+		nodoUltimo = null;
 		tamanio = 0;
 	}
 	
@@ -323,6 +324,42 @@ public class ListaSimple<T> implements Iterable<T> {
 		return lista;
 	}
 
+	public int obtenerCantidadValorRepetido(T valorABuscar) {
 
+		int contador = 0;
+
+		Nodo<T> actual = nodoPrimero;
+
+		if (nodoPrimero == null) {
+			throw new NoSuchElementException("La lista está vacía");
+		}
+
+		while (actual != null){
+			if (actual.getValorNodo() == valorABuscar){
+				contador++;
+			}
+			actual = actual.getSiguienteNodo();
+		}
+
+		return contador;
+	}
+
+	public ListaSimple<T> concatenarListas(ListaSimple<T> lista1, ListaSimple<T> lista2) {
+		ListaSimple<T> resultado = new ListaSimple<>();
+
+		Nodo<T> actual = lista1.getNodoPrimero();
+		while (actual != null) {
+			resultado.agregarfinal(actual.getValorNodo());
+			actual = actual.getSiguienteNodo();
+		}
+
+		actual = lista2.getNodoPrimero();
+		while (actual != null) {
+			resultado.agregarfinal(actual.getValorNodo());
+			actual = actual.getSiguienteNodo();
+		}
+
+		return resultado;
+	}
 
 }
