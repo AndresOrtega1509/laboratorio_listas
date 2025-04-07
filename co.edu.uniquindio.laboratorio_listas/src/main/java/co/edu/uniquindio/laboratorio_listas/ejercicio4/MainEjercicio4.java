@@ -17,6 +17,7 @@ public class MainEjercicio4 {
 
         ListaSimple<Integer> ListaSimple = obtenerValoresImpares(numeros);
 
+        System.out.println("Valores impares de una lista enlazada de numeros:");
         ListaSimple.imprimirLista();
     }
 

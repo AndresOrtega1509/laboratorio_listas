@@ -10,7 +10,7 @@ public class MainEjercicio6 {
         listaDobleEnlazada.agregarAlInicio(4);
         listaDobleEnlazada.agregarAlInicio(3);
 
-        System.out.println("Impresión hacia atrás:");
+        System.out.println("Impresión hacia atrás de una lista doblemente enlazada:");
         listaDobleEnlazada.imprimirHaciaAtras();
 
     }

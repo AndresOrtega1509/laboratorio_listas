@@ -1,6 +1,7 @@
 package co.edu.uniquindio.laboratorio_listas.ejercicio1;
 
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -221,7 +222,8 @@ public class ListaSimple<T> implements Iterable<T> {
 	public Iterator<T> iterator() {
 		return new IteradorListaSimple(nodoPrimero);
 	}
-	
+
+
 	protected class IteradorListaSimple implements Iterator<T>{
 
 		private Nodo<T> nodo;
