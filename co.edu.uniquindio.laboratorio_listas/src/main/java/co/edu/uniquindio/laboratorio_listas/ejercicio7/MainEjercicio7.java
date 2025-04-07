@@ -6,15 +6,15 @@ public class MainEjercicio7 {
 
     public static void main(String[] args) {
 
-        System.out.println("=== Lista Doble Enlazada de Personas ===");
-        ListaDobleEnlazadaIterator<Persona> listaPersonas = new ListaDobleEnlazadaIterator<>();
-        listaPersonas.agregar(new Persona("andres", "123456")); // 6 dígitos (par)
-        listaPersonas.agregar(new Persona("juan", "789"));      // 3 dígitos (impar)
-        listaPersonas.agregar(new Persona("karen", "2468")); // 4 dígitos (par)
+        System.out.println("=== Lista Doble Enlazada Iterator de palabras ===");
+        ListaDobleEnlazadaIterator<String> lista = new ListaDobleEnlazadaIterator<>();
+        lista.agregar("Hola");
+        lista.agregar("Como");
+        lista.agregar("Está?");
 
-        System.out.println("Recorriendo la lista de personas:");
-        for (Persona persona : listaPersonas) {
-            System.out.println(persona);
+        System.out.println("Recorriendo la lista:");
+        for (String palabra : lista) {
+            System.out.println(palabra);
         }
     }
 }

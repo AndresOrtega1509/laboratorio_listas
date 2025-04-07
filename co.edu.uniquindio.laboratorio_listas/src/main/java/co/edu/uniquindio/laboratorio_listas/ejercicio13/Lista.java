@@ -14,7 +14,7 @@ public class Lista {
     }
 
     /**
-     * Metodo recursivo para que calcula la máxima distancia entre dos nodos con
+     * Metodo recursivo que calcula la máxima distancia entre dos nodos con
      * un valor específico en una lista enlazada.
      * @param nodo: El nodo actual
      * @param x:  El valor buscado en la lista

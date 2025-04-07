@@ -14,7 +14,4 @@ public class MainEjercicio11 {
 
         tablaValoresPolinomio(polinomio);
     }
-
-
-
 }
